@@ -17,6 +17,7 @@
 		B5B93C1328705203000C01DE /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B93C1228705203000C01DE /* UpcomingViewController.swift */; };
 		B5B93C1528705217000C01DE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B93C1428705217000C01DE /* SearchViewController.swift */; };
 		B5B93C172870522C000C01DE /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B93C162870522C000C01DE /* DownloadsViewController.swift */; };
+		B5B93C1928707913000C01DE /* PosterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B93C1828707913000C01DE /* PosterHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B5B93C1228705203000C01DE /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		B5B93C1428705217000C01DE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B5B93C162870522C000C01DE /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		B5B93C1828707913000C01DE /* PosterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		B5B93C0E287051B0000C01DE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B5B93C1828707913000C01DE /* PosterHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				B5B93C172870522C000C01DE /* DownloadsViewController.swift in Sources */,
 				B5B93C11287051F0000C01DE /* HomeViewController.swift in Sources */,
 				B5B93BF728703F23000C01DE /* MainViewController.swift in Sources */,
+				B5B93C1928707913000C01DE /* PosterHeaderView.swift in Sources */,
 				B5B93BF328703F23000C01DE /* AppDelegate.swift in Sources */,
 				B5B93BFD28703F23000C01DE /* MovieApp.xcdatamodeld in Sources */,
 				B5B93BF528703F23000C01DE /* SceneDelegate.swift in Sources */,
