@@ -11,7 +11,6 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
         setupTabBar()
         setupItems()
     }
@@ -39,7 +38,6 @@ class MainViewController: UITabBarController {
         upcomingVc.title = "Upcoming"
         searchVc.title = "Top Search"
         downloadVc.title = "Downloads"
-        
     }
 
 

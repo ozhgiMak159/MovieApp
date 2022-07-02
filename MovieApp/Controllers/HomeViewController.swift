@@ -8,22 +8,73 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    private let identifier = "Cell"
+    
+    private let tableView: UITableView = {
+       let tableView = UITableView()
+        tableView.showsVerticalScrollIndicator = false
+        tableView.bounces = false
+        tableView.largeContentTitle = "Home"
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavBar()
+        subViews()
+        setConstraints()
+        setDelegate()
+    }
 
-        // Do any additional setup after loading the view.
+}
+
+extension HomeViewController: UITableViewDelegate {
+    
+}
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        30
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        
+        cell.textLabel?.text = "Hello, World"
+        
+        return cell
     }
-    */
+    
+    
+}
 
+extension HomeViewController {
+    private func setNavBar() {
+        view.backgroundColor = .systemBackground
+        title = "Home"
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+    }
+    
+    private func setDelegate() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    
+    private func subViews() {
+        view.addSubview(tableView)
+    }
+    
+    private func setConstraints() {
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+        
+        ])
+    }
+    
 }
