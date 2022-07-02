@@ -32,7 +32,6 @@ class PosterHeaderView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         posterImageView.frame = bounds
-        
     }
     
     private func setupGradient() {

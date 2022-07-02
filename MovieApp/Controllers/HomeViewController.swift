@@ -92,7 +92,7 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController {
     private func setNavBar() {
         view.backgroundColor = .systemBackground
-        title = "Home"
+       // title = "Home"
  
         var imageLogo = UIImage(named: "netflixLogo")
         imageLogo = imageLogo?.withRenderingMode(.alwaysOriginal)
