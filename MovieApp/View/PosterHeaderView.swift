@@ -17,18 +17,31 @@ class PosterHeaderView: UIView {
         return imageView
     }()
     
+    private let gradientLayer = CAGradientLayer()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(posterImageView)
-        posterImageView.frame = bounds
+        setupGradient()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func addGradient() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        posterImageView.frame = bounds
         
+    }
+    
+    private func setupGradient() {
+        self.layer.addSublayer(gradientLayer)
+        gradientLayer.frame = bounds
+        gradientLayer.colors = [
+            UIColor.clear.cgColor,
+            UIColor.systemBackground.cgColor
+        ]
     }
     
 
