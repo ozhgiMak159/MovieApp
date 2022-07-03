@@ -36,12 +36,12 @@ class HomeViewController: UIViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
     }
-
 }
 
+// MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        200
+        180
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -57,14 +57,14 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
         header.textLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
-        header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
+      //  header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.textColor = .white
 //        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLatter()
     }
 }
 
+// MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         sectionTitle.count
     }
@@ -84,16 +84,12 @@ extension HomeViewController: UITableViewDataSource {
         
         return cell
     }
-    
-   
-        
 }
-
+// MARK: - setup HomeViewController
 extension HomeViewController {
     private func setNavBar() {
         view.backgroundColor = .systemBackground
        // title = "Home"
- 
         var imageLogo = UIImage(named: "netflixLogo")
         imageLogo = imageLogo?.withRenderingMode(.alwaysOriginal)
         
@@ -107,9 +103,7 @@ extension HomeViewController {
             style: .done,
             target: self, action: nil
         )
-        
         navigationController?.navigationBar.tintColor = .white
-            
     }
     
     private func setDelegate() {
@@ -119,9 +113,7 @@ extension HomeViewController {
     
     private func subViews() {
         view.addSubview(tableView)
-        headerView = PosterHeaderView(
-            frame:CGRect(x: 0, y: 0, width: view.bounds.width, height: 430)
-        )
+        headerView = PosterHeaderView(frame:CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
         tableView.tableHeaderView = headerView
     }
     
