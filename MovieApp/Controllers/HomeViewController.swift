@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.showsVerticalScrollIndicator = false
+        tableView.bounces = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -35,6 +36,7 @@ class HomeViewController: UIViewController {
         setDelegate()
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+        
     }
 }
 
@@ -56,9 +58,8 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
-        header.textLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
-      //  header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
-        header.textLabel?.textColor = .white
+        header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+        header.textLabel?.textColor = #colorLiteral(red: 0.9076704545, green: 0.9076704545, blue: 0.9076704545, alpha: 1)
         header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLatter()
     }
 }
@@ -89,7 +90,7 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController {
     private func setNavBar() {
         view.backgroundColor = .systemBackground
-       // title = "Home"
+
         var imageLogo = UIImage(named: "netflixLogo")
         imageLogo = imageLogo?.withRenderingMode(.alwaysOriginal)
         
@@ -113,7 +114,7 @@ extension HomeViewController {
     
     private func subViews() {
         view.addSubview(tableView)
-        headerView = PosterHeaderView(frame:CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
+        headerView = PosterHeaderView(frame:CGRect(x: 0, y: 0, width: view.bounds.width, height: 470))
         tableView.tableHeaderView = headerView
     }
     
