@@ -59,7 +59,7 @@ extension HomeViewController: UITableViewDelegate {
         header.textLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
       //  header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.textColor = .white
-//        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLatter()
+        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLatter()
     }
 }
 

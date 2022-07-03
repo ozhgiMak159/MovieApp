@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B56CA003287160F90086A0B0 /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA002287160F90086A0B0 /* Extension + String.swift */; };
 		B5B93BF328703F23000C01DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B93BF228703F23000C01DE /* AppDelegate.swift */; };
 		B5B93BF528703F23000C01DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B93BF428703F23000C01DE /* SceneDelegate.swift */; };
 		B5B93BF728703F23000C01DE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B93BF628703F23000C01DE /* MainViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B56CA002287160F90086A0B0 /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		B5B93BEF28703F23000C01DE /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B93BF228703F23000C01DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5B93BF428703F23000C01DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B56CA001287160D10086A0B0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B56CA002287160F90086A0B0 /* Extension + String.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		B5B93BE628703F23000C01DE = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 				B5B93C0B28705166000C01DE /* Models */,
 				B5B93C0E287051B0000C01DE /* View */,
 				B5B93C0D2870518D000C01DE /* Controllers */,
+				B56CA001287160D10086A0B0 /* Extension */,
 				B5B93C0928704F66000C01DE /* App */,
 				B5B93C0A28704F80000C01DE /* Resource */,
 				B5B93BFB28703F23000C01DE /* MovieApp.xcdatamodeld */,
@@ -210,6 +221,7 @@
 			files = (
 				B5B93C1328705203000C01DE /* UpcomingViewController.swift in Sources */,
 				B5B93C1528705217000C01DE /* SearchViewController.swift in Sources */,
+				B56CA003287160F90086A0B0 /* Extension + String.swift in Sources */,
 				B5B93C172870522C000C01DE /* DownloadsViewController.swift in Sources */,
 				B5B93C11287051F0000C01DE /* HomeViewController.swift in Sources */,
 				B5B93BF728703F23000C01DE /* MainViewController.swift in Sources */,
