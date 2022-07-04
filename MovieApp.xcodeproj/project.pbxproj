@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B56CA003287160F90086A0B0 /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA002287160F90086A0B0 /* Extension + String.swift */; };
+		B5912CDE287334AF00CC8280 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5912CDD287334AF00CC8280 /* HomeTableViewCell.swift */; };
 		B5B93BF328703F23000C01DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B93BF228703F23000C01DE /* AppDelegate.swift */; };
 		B5B93BF528703F23000C01DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B93BF428703F23000C01DE /* SceneDelegate.swift */; };
 		B5B93BF728703F23000C01DE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B93BF628703F23000C01DE /* MainViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		B56CA002287160F90086A0B0 /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
+		B5912CDD287334AF00CC8280 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		B5B93BEF28703F23000C01DE /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B93BF228703F23000C01DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5B93BF428703F23000C01DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				B5B93C1828707913000C01DE /* PosterHeaderView.swift */,
+				B5912CDD287334AF00CC8280 /* HomeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5912CDE287334AF00CC8280 /* HomeTableViewCell.swift in Sources */,
 				B5B93C1328705203000C01DE /* UpcomingViewController.swift in Sources */,
 				B5B93C1528705217000C01DE /* SearchViewController.swift in Sources */,
 				B56CA003287160F90086A0B0 /* Extension + String.swift in Sources */,

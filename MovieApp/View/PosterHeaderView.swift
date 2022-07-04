@@ -35,7 +35,7 @@ class PosterHeaderView: UIView {
     }
     
     private func setupGradient() {
-        self.layer.addSublayer(gradientLayer)
+        layer.addSublayer(gradientLayer)
         gradientLayer.frame = bounds
         gradientLayer.colors = [
             UIColor.clear.cgColor,

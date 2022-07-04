@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
         setConstraints()
         setDelegate()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+        tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: identifier)
         
     }
 }
@@ -81,7 +81,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         
-        cell.textLabel?.text = "Hello, World"
+      //  cell.textLabel?.text = "Hello, World"
         
         return cell
     }
@@ -114,7 +114,7 @@ extension HomeViewController {
     
     private func subViews() {
         view.addSubview(tableView)
-        headerView = PosterHeaderView(frame:CGRect(x: 0, y: 0, width: view.bounds.width, height: 470))
+        headerView = PosterHeaderView(frame:CGRect(x: 0, y: 0, width: view.bounds.width, height: 480))
         tableView.tableHeaderView = headerView
     }
     
