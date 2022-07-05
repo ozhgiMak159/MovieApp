@@ -15,7 +15,7 @@ class HomeTableViewCell: UITableViewCell {
         layout.scrollDirection = .horizontal
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
         return collectionView
     }()
         
@@ -35,8 +35,6 @@ class HomeTableViewCell: UITableViewCell {
         collectionView.frame = contentView.bounds
     }
     
-    
-    
     private func setDelegate() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -51,8 +49,9 @@ extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        cell.backgroundColor = .red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ContentCollectionViewCell
+        cell.posterImage.image = UIImage(named: "Стетем")
+       // cell.backgroundColor = .red
         return cell
     }
 
