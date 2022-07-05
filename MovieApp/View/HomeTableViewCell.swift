@@ -10,12 +10,14 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
 
     private let collectionView: UICollectionView = {
+        // Как задать высоту ячейки
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 180, height: 280)
         layout.scrollDirection = .horizontal
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
@@ -32,7 +34,6 @@ class HomeTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-       // collectionView.frame = contentView.bounds
         contentView.addSubview(collectionView)
         setConstraint()
     }
