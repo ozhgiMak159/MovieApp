@@ -11,18 +11,18 @@ class HomeTableViewCell: UITableViewCell {
 
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 180, height: 180)
+        layout.itemSize = CGSize(width: 180, height: 280)
         layout.scrollDirection = .horizontal
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
         
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
-        contentView.addSubview(collectionView)
         setDelegate()
     }
     
@@ -32,12 +32,24 @@ class HomeTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        collectionView.frame = contentView.bounds
+       // collectionView.frame = contentView.bounds
+        contentView.addSubview(collectionView)
+        setConstraint()
     }
     
     private func setDelegate() {
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    private func setConstraint() {
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
+            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
+        
+        ])
     }
     
 }
@@ -51,7 +63,7 @@ extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ContentCollectionViewCell
         cell.posterImage.image = UIImage(named: "Стетем")
-       // cell.backgroundColor = .red
+       // cell.backgroundColor = .gray
         return cell
     }
 
