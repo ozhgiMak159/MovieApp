@@ -9,7 +9,7 @@ import UIKit
 
 class ContentCollectionViewCell: UICollectionViewCell {
     
-    var posterImage: UIImageView = {
+    let posterImage: UIImageView = {
        let image = UIImageView()
         image.contentMode = .scaleAspectFill
         image.clipsToBounds = true
@@ -17,23 +17,33 @@ class ContentCollectionViewCell: UICollectionViewCell {
         return image
     }()
     
-    private let titleName: UILabel = {
+     let titleName: UILabel = {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
+    let ratingView: UIView = {
+       let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .red
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor(ciColor: .white).cgColor
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(posterImage)
-       // addGradient()
-        contentView.addSubview(titleName)
+      //  posterImage.addSubview(titleName)
+        posterImage.addSubview(ratingView)
         
-      //  posterImage.frame = bounds
+       // posterImage.addSubview(titleName)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        ratingView.layer.cornerRadius = ratingView.frame.size.height / 2
         setConstraints()
     }
     
@@ -41,15 +51,7 @@ class ContentCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    private func addGradient() {
-//        let gradientLayer = CAGradientLayer()
-//        gradientLayer.colors = [
-//            UIColor.clear.cgColor,
-//            UIColor.systemBackground.cgColor
-//        ]
-//        gradientLayer.frame = bounds
-//        layer.addSublayer(gradientLayer)
-//    }
+
     
     
     private func setConstraints() {
@@ -60,6 +62,20 @@ class ContentCollectionViewCell: UICollectionViewCell {
             posterImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
             
         ])
+        
+//        NSLayoutConstraint.activate([
+////            titleName.topAnchor.constraint(equalTo: posterImage.topAnchor, constant: 10),
+////            titleName.leadingAnchor.constraint(equalTo: posterImage.leadingAnchor, constant: 15)
+//        ])
+        
+        NSLayoutConstraint.activate([
+            ratingView.topAnchor.constraint(equalTo: posterImage.topAnchor, constant: 10),
+            ratingView.leadingAnchor.constraint(equalTo: posterImage.leadingAnchor, constant: 10),
+            ratingView.widthAnchor.constraint(equalToConstant: 35),
+            ratingView.heightAnchor.constraint(equalToConstant: 35)
+        ])
+        
+        
     }
     
     

@@ -65,6 +65,7 @@ extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ContentCollectionViewCell
         cell.posterImage.image = UIImage(named: "Стетем")
        // cell.backgroundColor = .gray
+        //cell.titleName.text = "Rating: 10"
         return cell
     }
 
