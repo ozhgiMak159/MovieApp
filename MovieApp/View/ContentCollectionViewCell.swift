@@ -23,7 +23,7 @@ class ContentCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    let ratingView: UIView = {
+    var ratingView: UIView = {
        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .red
@@ -35,17 +35,24 @@ class ContentCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(posterImage)
-      //  posterImage.addSubview(titleName)
         posterImage.addSubview(ratingView)
         
-       // posterImage.addSubview(titleName)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+       
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        ratingView.layer.cornerRadius = ratingView.frame.size.height / 2
         setConstraints()
+        ratingView.layer.cornerRadius = ratingView.frame.height / 2
     }
+    
+    
+   
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
