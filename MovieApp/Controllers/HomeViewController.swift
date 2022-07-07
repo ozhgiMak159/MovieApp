@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     ]
     
     private var headerView: PosterHeaderView?
+  
     
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
@@ -27,6 +28,8 @@ class HomeViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
+    
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()

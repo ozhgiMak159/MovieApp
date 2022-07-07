@@ -36,7 +36,7 @@ class HomeTableViewCell: UITableViewCell {
         super.layoutSubviews()
         contentView.addSubview(collectionView)
         setConstraint()
-        collectionView.reloadData()
+      //  collectionView.reloadData()
     }
     
     private func setDelegate() {
@@ -65,8 +65,7 @@ extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ContentCollectionViewCell
         cell.posterImage.image = UIImage(named: "Стетем")
-      //  cell.ratingView.layer.cornerRadius = 20
-       // cell.ratingView.clipsToBounds = true
+    
         return cell
     }
     

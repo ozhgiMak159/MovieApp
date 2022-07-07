@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B569B14C28772F9C00D89A45 /* CircleRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B569B14B28772F9C00D89A45 /* CircleRating.swift */; };
 		B56CA003287160F90086A0B0 /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA002287160F90086A0B0 /* Extension + String.swift */; };
 		B5912CDE287334AF00CC8280 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5912CDD287334AF00CC8280 /* HomeTableViewCell.swift */; };
 		B5B93BF328703F23000C01DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B93BF228703F23000C01DE /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B569B14B28772F9C00D89A45 /* CircleRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleRating.swift; sourceTree = "<group>"; };
 		B56CA002287160F90086A0B0 /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		B5912CDD287334AF00CC8280 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		B5B93BEF28703F23000C01DE /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 				B5B93C1828707913000C01DE /* PosterHeaderView.swift */,
 				B5912CDD287334AF00CC8280 /* HomeTableViewCell.swift */,
 				B5CFA2C528747358001805EB /* ContentCollectionViewCell.swift */,
+				B569B14B28772F9C00D89A45 /* CircleRating.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				B5B93C1928707913000C01DE /* PosterHeaderView.swift in Sources */,
 				B5CFA2C628747358001805EB /* ContentCollectionViewCell.swift in Sources */,
 				B5B93BF328703F23000C01DE /* AppDelegate.swift in Sources */,
+				B569B14C28772F9C00D89A45 /* CircleRating.swift in Sources */,
 				B5B93BFD28703F23000C01DE /* MovieApp.xcdatamodeld in Sources */,
 				B5B93BF528703F23000C01DE /* SceneDelegate.swift in Sources */,
 			);
