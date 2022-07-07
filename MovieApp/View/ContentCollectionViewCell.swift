@@ -20,7 +20,7 @@ class ContentCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.addSubview(posterImage)
+        self.addSubview(posterImage)
         posterImage.addSubview(ratingView)
         posterImage.frame = bounds
     }
