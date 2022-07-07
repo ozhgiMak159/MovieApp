@@ -55,6 +55,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B569B14D2877403400D89A45 /* HomeTabVC */ = {
+			isa = PBXGroup;
+			children = (
+				B5912CDD287334AF00CC8280 /* HomeTableViewCell.swift */,
+				B5CFA2C528747358001805EB /* ContentCollectionViewCell.swift */,
+				B569B14E2877405A00D89A45 /* Cell */,
+				B5B93C10287051F0000C01DE /* HomeViewController.swift */,
+			);
+			path = HomeTabVC;
+			sourceTree = "<group>";
+		};
+		B569B14E2877405A00D89A45 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		B56CA001287160D10086A0B0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				B5B93C0F287051C5000C01DE /* MainTabBar */,
-				B5B93C10287051F0000C01DE /* HomeViewController.swift */,
+				B569B14D2877403400D89A45 /* HomeTabVC */,
 				B5B93C1228705203000C01DE /* UpcomingViewController.swift */,
 				B5B93C1428705217000C01DE /* SearchViewController.swift */,
 				B5B93C162870522C000C01DE /* DownloadsViewController.swift */,
@@ -143,8 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				B5B93C1828707913000C01DE /* PosterHeaderView.swift */,
-				B5912CDD287334AF00CC8280 /* HomeTableViewCell.swift */,
-				B5CFA2C528747358001805EB /* ContentCollectionViewCell.swift */,
 				B569B14B28772F9C00D89A45 /* CircleRating.swift */,
 			);
 			path = View;
