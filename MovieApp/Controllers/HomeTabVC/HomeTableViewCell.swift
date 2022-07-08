@@ -10,11 +10,9 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
 
     private let collectionView: UICollectionView = {
-        // Как задать высоту ячейки
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 180, height: 280)
         layout.scrollDirection = .horizontal
-        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
         collectionView.showsHorizontalScrollIndicator = false
@@ -36,7 +34,6 @@ class HomeTableViewCell: UITableViewCell {
         super.layoutSubviews()
         contentView.addSubview(collectionView)
         setConstraint()
-      //  collectionView.reloadData()
     }
     
     private func setDelegate() {
@@ -65,9 +62,11 @@ extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ContentCollectionViewCell
         cell.posterImage.image = UIImage(named: "Стетем")
+        cell.ratingLabel.text = "10.0"
     
         return cell
     }
     
-
+    
 }
+

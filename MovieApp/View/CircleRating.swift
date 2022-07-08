@@ -37,8 +37,8 @@ class CircleRating: UIView {
         NSLayoutConstraint.activate([
             ratingView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             ratingView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            ratingView.widthAnchor.constraint(equalToConstant: 35),
-            ratingView.heightAnchor.constraint(equalToConstant: 35)
+            ratingView.widthAnchor.constraint(equalToConstant: 40),
+            ratingView.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     
