@@ -20,6 +20,7 @@ class TitlePreviewViewController: UIViewController {
        let imageView = UIImageView()
         imageView.image = UIImage(named: "Стетем")
         imageView.contentMode = .scaleAspectFill
+       // imageView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -52,7 +53,7 @@ class TitlePreviewViewController: UIViewController {
             imagePoster.topAnchor.constraint(equalTo: view.topAnchor),
             imagePoster.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             imagePoster.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            imagePoster.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -290),
+            imagePoster.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -250),
            
         ])
     }
