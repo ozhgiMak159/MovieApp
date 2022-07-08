@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B50981B528787340007AA2D2 /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50981B428787340007AA2D2 /* TitlePreviewViewController.swift */; };
 		B569B14C28772F9C00D89A45 /* CircleRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B569B14B28772F9C00D89A45 /* CircleRating.swift */; };
 		B56CA003287160F90086A0B0 /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA002287160F90086A0B0 /* Extension + String.swift */; };
 		B5912CDE287334AF00CC8280 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5912CDD287334AF00CC8280 /* HomeTableViewCell.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B50981B428787340007AA2D2 /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
 		B569B14B28772F9C00D89A45 /* CircleRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleRating.swift; sourceTree = "<group>"; };
 		B56CA002287160F90086A0B0 /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		B5912CDD287334AF00CC8280 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -58,10 +60,8 @@
 		B569B14D2877403400D89A45 /* HomeTabVC */ = {
 			isa = PBXGroup;
 			children = (
-				B5912CDD287334AF00CC8280 /* HomeTableViewCell.swift */,
-				B5CFA2C528747358001805EB /* ContentCollectionViewCell.swift */,
-				B569B14E2877405A00D89A45 /* Cell */,
 				B5B93C10287051F0000C01DE /* HomeViewController.swift */,
+				B569B14E2877405A00D89A45 /* Cell */,
 			);
 			path = HomeTabVC;
 			sourceTree = "<group>";
@@ -69,6 +69,8 @@
 		B569B14E2877405A00D89A45 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B5912CDD287334AF00CC8280 /* HomeTableViewCell.swift */,
+				B5CFA2C528747358001805EB /* ContentCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -153,6 +155,7 @@
 				B5B93C1228705203000C01DE /* UpcomingViewController.swift */,
 				B5B93C1428705217000C01DE /* SearchViewController.swift */,
 				B5B93C162870522C000C01DE /* DownloadsViewController.swift */,
+				B50981B428787340007AA2D2 /* TitlePreviewViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			files = (
 				B5912CDE287334AF00CC8280 /* HomeTableViewCell.swift in Sources */,
 				B5B93C1328705203000C01DE /* UpcomingViewController.swift in Sources */,
+				B50981B528787340007AA2D2 /* TitlePreviewViewController.swift in Sources */,
 				B5B93C1528705217000C01DE /* SearchViewController.swift in Sources */,
 				B56CA003287160F90086A0B0 /* Extension + String.swift in Sources */,
 				B5B93C172870522C000C01DE /* DownloadsViewController.swift in Sources */,

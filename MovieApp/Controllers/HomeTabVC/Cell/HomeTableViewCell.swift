@@ -15,6 +15,7 @@ class HomeTableViewCell: UITableViewCell {
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.bounces = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -47,7 +48,6 @@ class HomeTableViewCell: UITableViewCell {
             collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
             collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
-        
         ])
     }
     

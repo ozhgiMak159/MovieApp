@@ -20,6 +20,7 @@ class ContentCollectionViewCell: UICollectionViewCell {
     
     let ratingLabel: UILabel = {
        let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -40,7 +41,7 @@ class ContentCollectionViewCell: UICollectionViewCell {
     
     private func setConstraint() {
         NSLayoutConstraint.activate([
-            ratingLabel.centerXAnchor.constraint(equalTo: ratingView.centerXAnchor, constant: 29),
+            ratingLabel.centerXAnchor.constraint(equalTo: ratingView.centerXAnchor, constant: 30),
             ratingLabel.centerYAnchor.constraint(equalTo: ratingView.centerYAnchor, constant: 30),
         ])
     }

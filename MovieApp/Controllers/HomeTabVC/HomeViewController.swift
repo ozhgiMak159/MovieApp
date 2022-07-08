@@ -29,8 +29,6 @@ class HomeViewController: UIViewController {
         return tableView
     }()
     
-   
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavBar()
