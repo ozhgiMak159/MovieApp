@@ -9,7 +9,6 @@ import UIKit
 
 class TitlePreviewViewController: UIViewController {
     
-    
     private let scrollView: UIScrollView = {
        let scroll = UIScrollView()
         scroll.translatesAutoresizingMaskIntoConstraints = false
@@ -19,9 +18,8 @@ class TitlePreviewViewController: UIViewController {
     private var imagePoster: UIImageView = {
        let imageView = UIImageView()
         imageView.image = UIImage(named: "Стетем")
-        imageView.contentMode = .top
+        imageView.contentMode = .redraw
         imageView.clipsToBounds = true
-       // imageView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -33,10 +31,6 @@ class TitlePreviewViewController: UIViewController {
         view.backgroundColor = .systemBackground
         setAddView()
         setConstraint()
-        
-//       // imagePoster.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height / 2)
-//        print(imagePoster.frame.height)
-//        print(imagePoster.frame.width)
     }
     
     private func setupGradient() {
@@ -50,19 +44,14 @@ class TitlePreviewViewController: UIViewController {
     
     private func setAddView() {
         view.addSubview(imagePoster)
-      //  setupGradient()
+       // setupGradient()
     }
     
     private func setConstraint() {
         NSLayoutConstraint.activate([
             imagePoster.topAnchor.constraint(equalTo: view.topAnchor),
-            imagePoster.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            imagePoster.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-           // imagePoster.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -300),
-          //  imagePoster.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6),
-            imagePoster.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5, constant: 70)
-          
-           
+            imagePoster.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1),
+            imagePoster.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6, constant: 30)
         ])
     }
     
