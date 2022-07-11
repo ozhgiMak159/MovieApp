@@ -36,36 +36,17 @@ class TitlePreviewViewController: UIViewController {
     private func setupGradient() {
         imagePoster.layer.addSublayer(gradientLayer)
         gradientLayer.frame = CGRect(x: 0, y: view.frame.height / 2, width: view.frame.width, height: 250)
-//        gradientLayer.startPoint = CGPoint(x: 0, y: 0.8)
-//        gradientLayer.endPoint = CGPoint(x: 0.8, y: 0.2)
-       
-        gradientLayer.locations = [0.02, 0.35]
-       
-        
-        
+        gradientLayer.cornerRadius = 30
+        gradientLayer.locations = [0.01, 0.3]
         gradientLayer.colors = [
             UIColor.systemGray.cgColor,
             UIColor.systemBackground.cgColor,
         ]
-        
     }
-    
-    
-//    private func addGradient() {
-//        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
-//        gradientLayer.startPoint = CGPoint(x: 0, y: 9)
-//        gradientLayer.endPoint = CGPoint(x: 2, y: 2)
-//        gradientLayer.frame = view.bounds
-//        imagePoster.addSubview(gradientLayer)
-//    }
-    
-    
-    
     
     private func setAddView() {
         setupGradient()
         view.addSubview(imagePoster)
-       // addGradient()
     }
     
     private func setConstraint() {
