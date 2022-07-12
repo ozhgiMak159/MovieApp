@@ -11,6 +11,8 @@ class TitlePreviewViewController: UIViewController {
     
     private let scrollView: UIScrollView = {
        let scroll = UIScrollView()
+        scroll.bounces = false
+        scroll.delaysContentTouches = false
         scroll.translatesAutoresizingMaskIntoConstraints = false
         return scroll
     }()
@@ -22,6 +24,15 @@ class TitlePreviewViewController: UIViewController {
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
+    }()
+    
+    private let closeButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setBackgroundImage(UIImage(systemName: "chevron.left.circle.fill"), for: .normal)
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(closeButtonTapp), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     private let gradientLayer = CAGradientLayer()
@@ -40,22 +51,44 @@ class TitlePreviewViewController: UIViewController {
         gradientLayer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         gradientLayer.locations = [0.01, 0.3]
         gradientLayer.colors = [
-            UIColor.systemGray.cgColor,
+            UIColor.systemGray.withAlphaComponent(0.97).cgColor,
             UIColor.systemBackground.cgColor,
         ]
     }
     
+    @objc private func closeButtonTapp() {
+        print("Close")
+    }
+    
     private func setAddView() {
+        view.addSubview(scrollView)
+        scrollView.addSubview(imagePoster)
+        scrollView.addSubview(closeButton)
         setupGradient()
-        view.addSubview(imagePoster)
     }
     
     private func setConstraint() {
+        
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+        ])
+        
         NSLayoutConstraint.activate([
             imagePoster.topAnchor.constraint(equalTo: view.topAnchor),
             imagePoster.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1),
             imagePoster.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6, constant: 30)
         ])
+        
+        NSLayoutConstraint.activate([
+            closeButton.topAnchor.constraint(equalTo: imagePoster.topAnchor, constant: 50),
+            closeButton.leadingAnchor.constraint(equalTo: imagePoster.leadingAnchor, constant: 20),
+            closeButton.heightAnchor.constraint(equalToConstant: 35),
+            closeButton.widthAnchor.constraint(equalToConstant: 35)
+        ])
+        
     }
     
 }
