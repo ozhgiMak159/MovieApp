@@ -74,10 +74,14 @@ class InformationMovie: UIView {
     private func setAddSubview() {
         addSubview(nameMovie)
         translatesAutoresizingMaskIntoConstraints = false
+        
         stackView = UIStackView(
             arrangedSubviews: [ageMovie, movieStudio, timeMove],
             axis: .horizontal,
-            spacing: 5)
+            distribution: .equalSpacing,
+            spacing: 10
+        )
+        
         addSubview(stackView)
     }
     
@@ -90,9 +94,9 @@ class InformationMovie: UIView {
         
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: nameMovie.bottomAnchor, constant: 10),
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
-            stackView.heightAnchor.constraint(equalToConstant: 20)
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
+            stackView.heightAnchor.constraint(equalToConstant: 25)
         ])
     }
     

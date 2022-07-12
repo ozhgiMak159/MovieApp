@@ -94,8 +94,10 @@ class TitlePreviewViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             informationMovie.bottomAnchor.constraint(equalTo: imagePoster.bottomAnchor, constant: -110),
-            informationMovie.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            informationMovie.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+           // informationMovie.bottomAnchor.constraint(greaterThanOrEqualTo: imagePoster.bottomAnchor, constant: -110),
+            informationMovie.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            informationMovie.trailingAnchor.constraint(greaterThanOrEqualTo: view.trailingAnchor, constant: -50)
+           // informationMovie.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
            
         ])
         
