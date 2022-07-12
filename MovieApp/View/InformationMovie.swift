@@ -93,7 +93,7 @@ class InformationMovie: UIView {
         ])
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: nameMovie.bottomAnchor, constant: 10),
+            stackView.topAnchor.constraint(equalTo: nameMovie.bottomAnchor, constant: 7),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
             stackView.heightAnchor.constraint(equalToConstant: 25)
