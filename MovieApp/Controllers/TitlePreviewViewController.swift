@@ -35,8 +35,9 @@ class TitlePreviewViewController: UIViewController {
     
     private func setupGradient() {
         imagePoster.layer.addSublayer(gradientLayer)
-        gradientLayer.frame = CGRect(x: 0, y: view.frame.height / 2, width: view.frame.width, height: 250)
+        gradientLayer.frame = CGRect(x: 0, y: view.frame.height / 2, width: view.frame.width, height: view.frame.height / 3.5)
         gradientLayer.cornerRadius = 30
+        gradientLayer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         gradientLayer.locations = [0.01, 0.3]
         gradientLayer.colors = [
             UIColor.systemGray.cgColor,
