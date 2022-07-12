@@ -37,6 +37,8 @@ class TitlePreviewViewController: UIViewController {
     
     private let gradientLayer = CAGradientLayer()
     
+    private let informationMovie = InformationMovie()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -64,6 +66,7 @@ class TitlePreviewViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(imagePoster)
         scrollView.addSubview(closeButton)
+        scrollView.addSubview(informationMovie)
         setupGradient()
     }
     
@@ -87,6 +90,13 @@ class TitlePreviewViewController: UIViewController {
             closeButton.leadingAnchor.constraint(equalTo: imagePoster.leadingAnchor, constant: 20),
             closeButton.heightAnchor.constraint(equalToConstant: 35),
             closeButton.widthAnchor.constraint(equalToConstant: 35)
+        ])
+        
+        NSLayoutConstraint.activate([
+            informationMovie.bottomAnchor.constraint(equalTo: imagePoster.bottomAnchor, constant: -110),
+            informationMovie.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            informationMovie.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+           
         ])
         
     }
