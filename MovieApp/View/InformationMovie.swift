@@ -44,7 +44,7 @@ class InformationMovie: UIView {
     
     private let ratingMovie: UILabel = {
        let label = UILabel()
-        label.text = "7.2 - - - - - - - -"
+        label.text = "- - - - - - - - 7.2"
         label.font = .systemFont(ofSize: 15)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -57,14 +57,14 @@ class InformationMovie: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    private var stackView = UIStackView()
+        
+    private var stackViewHorizon = UIStackView()
+    private var stackViewVertical = UIStackView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setAddSubview()
         setConstraints()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -75,14 +75,22 @@ class InformationMovie: UIView {
         addSubview(nameMovie)
         translatesAutoresizingMaskIntoConstraints = false
         
-        stackView = UIStackView(
+        stackViewHorizon = UIStackView(
             arrangedSubviews: [ageMovie, movieStudio, timeMove],
             axis: .horizontal,
             distribution: .equalSpacing,
             spacing: 10
         )
         
-        addSubview(stackView)
+        stackViewVertical = UIStackView(
+            arrangedSubviews: [stackViewHorizon, ratingMovie],
+            axis: .vertical,
+            distribution: .equalSpacing,
+            spacing: 10)
+            
+        addSubview(stackViewHorizon)
+        addSubview(stackViewVertical)
+       // addSubview(informationMovie)
     }
     
     private func setConstraints() {
@@ -93,11 +101,17 @@ class InformationMovie: UIView {
         ])
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: nameMovie.bottomAnchor, constant: 7),
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
-            stackView.heightAnchor.constraint(equalToConstant: 25)
+            stackViewHorizon.topAnchor.constraint(equalTo: nameMovie.bottomAnchor, constant: 7),
+            stackViewHorizon.centerXAnchor.constraint(equalTo: nameMovie.centerXAnchor),
+            stackViewHorizon.heightAnchor.constraint(equalToConstant: 25)
         ])
+        
+        NSLayoutConstraint.activate([
+            stackViewVertical.topAnchor.constraint(equalTo: stackViewHorizon.topAnchor, constant: 15),
+            stackViewVertical.centerXAnchor.constraint(equalTo: stackViewHorizon.centerXAnchor),
+            stackViewVertical.heightAnchor.constraint(equalToConstant: 45)
+        ])
+        
     }
     
 }

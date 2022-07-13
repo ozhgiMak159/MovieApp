@@ -35,6 +35,14 @@ class TitlePreviewViewController: UIViewController {
         return button
     }()
     
+    private let playButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Play Trailer", for: .normal)
+        button.backgroundColor = .red
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     private let gradientLayer = CAGradientLayer()
     
     private let informationMovie = InformationMovie()
@@ -94,8 +102,7 @@ class TitlePreviewViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             informationMovie.topAnchor.constraint(equalTo: imagePoster.topAnchor, constant: view.frame.height / 2),
-            informationMovie.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            informationMovie.trailingAnchor.constraint(greaterThanOrEqualTo: view.trailingAnchor, constant: -50)
+            informationMovie.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
     }
