@@ -83,6 +83,7 @@ class TitlePreviewViewController: UIViewController {
     
     private func setAddView() {
         view.addSubview(scrollView)
+        
         scrollView.addSubview(imagePoster)
         scrollView.addSubview(closeButton)
         scrollView.addSubview(informationMovie)
@@ -129,7 +130,6 @@ class TitlePreviewViewController: UIViewController {
             playButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             playButton.widthAnchor.constraint(equalToConstant: 160),
             playButton.heightAnchor.constraint(equalToConstant: 40)
-        
         ])
         
     }
