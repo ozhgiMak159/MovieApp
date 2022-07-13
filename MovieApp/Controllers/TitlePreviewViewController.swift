@@ -35,10 +35,21 @@ class TitlePreviewViewController: UIViewController {
         return button
     }()
     
+    private let informationMovies: UILabel = {
+       let label = UILabel()
+        label.text = "Грузовики лос-анджелесской инкассаторской компании Fortico Security часто подвергаются нападениям, и во время очередного ограбления погибают оба охранника."
+        label.numberOfLines = 0
+        label.font = .systemFont(ofSize: 18)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private let playButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Play Trailer", for: .normal)
+        button.layer.cornerRadius = 10
         button.backgroundColor = .red
+        button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -75,6 +86,8 @@ class TitlePreviewViewController: UIViewController {
         scrollView.addSubview(imagePoster)
         scrollView.addSubview(closeButton)
         scrollView.addSubview(informationMovie)
+        scrollView.addSubview(informationMovies)
+        scrollView.addSubview(playButton)
         setupGradient()
     }
     
@@ -102,7 +115,21 @@ class TitlePreviewViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             informationMovie.topAnchor.constraint(equalTo: imagePoster.topAnchor, constant: view.frame.height / 2),
-            informationMovie.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            informationMovie.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        ])
+        
+        NSLayoutConstraint.activate([
+            informationMovies.topAnchor.constraint(equalTo: informationMovie.bottomAnchor, constant: 120),
+            informationMovies.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            informationMovies.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
+        ])
+        
+        NSLayoutConstraint.activate([
+            playButton.topAnchor.constraint(equalTo: informationMovies.bottomAnchor, constant: 100),
+            playButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            playButton.widthAnchor.constraint(equalToConstant: 160),
+            playButton.heightAnchor.constraint(equalToConstant: 40)
+        
         ])
         
     }

@@ -50,13 +50,14 @@ class InformationMovie: UIView {
         return label
     }()
     
-    private let informationMovie: UILabel = {
-       let label = UILabel()
-        label.text = "Хмурый мужчина прикидывается инкассатором, чтобы выйти на грабителей. Гай Ричи и Джейсон Стэйтем снова вместе"
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+//    private let informationMovie: UILabel = {
+//       let label = UILabel()
+//        label.text = "Грузовики лос-анджелесской инкассаторской компании Fortico Security часто подвергаются нападениям, и во время очередного ограбления погибают оба охранника."
+//        label.numberOfLines = 0
+//        label.font = .systemFont(ofSize: 18)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
         
     private var stackViewHorizon = UIStackView()
     private var stackViewVertical = UIStackView()
@@ -111,6 +112,10 @@ class InformationMovie: UIView {
             stackViewVertical.centerXAnchor.constraint(equalTo: stackViewHorizon.centerXAnchor),
             stackViewVertical.heightAnchor.constraint(equalToConstant: 45)
         ])
+        
+//        NSLayoutConstraint.activate([
+//            informationMovie.topAnchor.constraint(equalTo: stackViewVertical.bottomAnchor, constant: 10)
+//        ])
         
     }
     
